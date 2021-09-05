@@ -1,14 +1,14 @@
 import os
 from sys import argv
 import argparse
-import data_utils
-import fetcher
+
 from dotenv import load_dotenv
 import json
 from os.path import join
 from os import mkdir, getcwd, listdir
-from board_obj import Board
-import oauth_helper
+
+
+import installer
 
 os.chdir(join(getcwd(), 'softnahoria'))
 parser = argparse.ArgumentParser(description="Ayudante helper")
@@ -16,9 +16,13 @@ parser.add_argument("command", help="Comando a correr")
 args = parser.parse_args()
 
 if args.command == "install":
-    data_utils.new_installation()
+    installer.new_installation()
     exit()
 
+import data_utils
+import fetcher
+from board_obj import Board
+import oauth_helper
 # Cargamos archivo .env
 load_dotenv()
 # Cargamos parámetros

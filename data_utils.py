@@ -10,18 +10,6 @@ from fetcher import fetch_board_id
 dir_path = join(getcwd(), "data")
 
 
-def new_installation():
-    if not isdir(dir_path):
-        mkdir(dir_path)
-    json_ = {
-              "outdir_name": "data",
-              "n_entrega": 0,
-              "grupos": {}
-            }
-    with open('params.json', 'w') as file:
-        json.dump(json_, file)
-
-
 def make_group(name, link):
     id_ = fetch_board_id(link)
     tg_path = join(dir_path, name)
