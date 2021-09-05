@@ -6,8 +6,8 @@ dir_path = join(getcwd(), "data")
 
 
 def new_installation():
-    if not isdir(dir_path):
-        mkdir(dir_path)
+    if not isdir("data"):
+        mkdir("data")
     json_ = {
               "outdir_name": "data",
               "n_entrega": 0,
