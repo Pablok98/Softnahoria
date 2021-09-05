@@ -46,5 +46,3 @@ def token_creator():
     }
     with open('secret.json', 'w') as file:
         json.dump(yeison, file)
-
-token_creator()
