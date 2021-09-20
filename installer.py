@@ -2,6 +2,8 @@ from os import mkdir, getcwd
 from os.path import isdir, join, isfile
 import json
 
+import os
+
 dir_path = join(getcwd(), "data")
 
 
@@ -15,3 +17,4 @@ def new_installation():
             }
     with open('params.json', 'w') as file:
         json.dump(json_, file)
+
